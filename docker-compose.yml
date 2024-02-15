@@ -1,0 +1,18 @@
+version: "3"
+services:
+  api:
+    build:
+      dockerfile: Dockerfile
+      context: "."
+    depends_on:
+      - db
+    ports:
+      - "3001:3001"
+    container_name: practice-api
+
+  db:
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    container_name: practice-db
