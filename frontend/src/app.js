@@ -1,5 +1,5 @@
 import { useLayoutEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { Error } from './components';
 import { Authorization, Post, Registration, Users } from './pages';
@@ -30,7 +30,15 @@ export const App = () => {
 
 	return (
 		<Routes>
-			<Route path="/" element={<div>Сайтик в разработке...</div>} />
+			<Route
+				path="/"
+				element={
+					<>
+						<div>Сайтик в разработке...</div>
+						<Link to={`/blog`}>Перейти в блог</Link>
+					</>
+				}
+			/>
 			<Route path="/blog" element={<Blog />}>
 				<Route index element={<Main />} />
 				<Route path="/blog/post" element={<Post />} />
