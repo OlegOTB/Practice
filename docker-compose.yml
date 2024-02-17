@@ -7,7 +7,7 @@ services:
     depends_on:
       - db
     ports:
-      - "3001:3001"
+      - "80:3001"
     container_name: practice-api
 
   db:
