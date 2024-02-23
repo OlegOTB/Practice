@@ -9,8 +9,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "REM_bcrypt": "^5.1.1",
+  "REM_mongoose": "^4.3.1",
   "dependencies": {
-    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",

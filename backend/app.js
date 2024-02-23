@@ -3,6 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
+const path = require("path");
 const {
   register,
   login,
@@ -33,6 +34,16 @@ app.use(express.static("../frontend/build"));
 
 app.use(cookieParser());
 app.use(express.json());
+
+app.get("*", (req, res, next) => {
+  if (req.headers.frontend) {
+    next(); // передаем управление следующему обработчику
+  } else {
+    res.sendFile(
+      path.resolve(__dirname, "..", "frontend", "build", "index.html")
+    );
+  }
+});
 
 app.post("/register", async (req, res) => {
   try {
