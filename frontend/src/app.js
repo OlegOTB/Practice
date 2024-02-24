@@ -47,7 +47,7 @@ export const App = () => {
 			</Route>
 			<Route path="/login" element={<Authorization />} />
 			<Route path="/register" element={<Registration />} />
-			<Route path="/users" element={<Users />} />
+			<Route path="/users/all" element={<Users />} />
 			<Route path="*" element={<Error error={ERROR.PAGE_NOT_EXIST} />} />
 		</Routes>
 	);

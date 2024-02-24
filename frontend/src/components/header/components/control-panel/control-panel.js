@@ -52,7 +52,7 @@ const ControlPanelContainer = ({ className }) => {
 						<Link to="/blog/post">
 							<Icon id="fa-file-text-o" margin="10px 0 0 16px" />
 						</Link>
-						<Link to="/users">
+						<Link to="/users/all">
 							<Icon id="fa-users" margin="10px 0 0 16px" />
 						</Link>
 					</>
